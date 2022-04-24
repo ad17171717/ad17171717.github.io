@@ -1,1 +1,1 @@
-# Personal Website for Adrian Dolinay
+# An aspiring STEM geek
