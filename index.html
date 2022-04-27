@@ -2,16 +2,20 @@
   <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico">
 </head>
 
-<video autoplay muted loop id="myVideo">
+<video autoplay muted loop id="code_loop">
   <source src="vid/code_loop_fin.mp4" type="video/mp4">
 </video>
 
-myVideo {
+#code_loob {
+  width: 50vw;
+  height: 50vh;
+  object-fit: cover;
   position: fixed;
+  left: 0;
   right: 0;
+  top: 0;
   bottom: 0;
-  min-width: 50%;
-  min-height: 50%;
+  z-index: -1;
 }
 
 
