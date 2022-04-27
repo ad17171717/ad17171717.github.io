@@ -1,3 +1,5 @@
+<body style="background-color:darkgray;">
+
 <div class="header">
   <head>
     <link rel="shortcut icon" type="image/x-icon" href="./img/logo_final.png">
@@ -9,7 +11,7 @@
 
 <div class="section">
 
-        <h1>Portfolio</h1>
+        <h1>Portfolio:</h1>
   
   
         <h2><a href= "youtube_portfolio.html">YouTube Videos</a></h2>
@@ -26,7 +28,7 @@
 <style>
  
 .header{
-  height: 50px;
+  height: 60px;
   width: 100%;
   font-family: "Verdana";
   background-color:black;
@@ -86,9 +88,13 @@
   opacity: 0.5;
 }
   
-a:hover {
-  color: red;
-  background-color: transparent;
-}
+a { color:white } /* Globally */
+
+/* Each state */
+
+a:visited {text-decoration: none; color:white; }
+a:hover { text-decoration: none; color:white; }
+a:focus { text-decoration: none; color:white; }
+a:hover, a:active { text-decoration: none; color:white }
   
 </style>
