@@ -1,0 +1,117 @@
+/* Reset some basic elements for better cross-browser compatibility */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+nav .nav-links li {
+    margin-left: 20px;
+}
+
+nav .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+nav .social-links {
+    display: flex;
+    align-items: center;
+}
+
+nav .social-links a {
+    margin-left: 10px;
+}
+
+nav .social-links img {
+    height: 30px;
+}
+
+.hero {
+    background: url('assets/images/hero-image.jpg') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.content {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav .nav-links {
+        flex-direction: column;
+    }
+    nav .nav-links li {
+        margin: 10px 0;
+    }
+    .hero h1 {
+        font-size: 2em;
+    }
+}
