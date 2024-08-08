@@ -1,3 +1,4 @@
+/* Reset some basic elements for better cross-browser compatibility */
 * {
     margin: 0;
     padding: 0;
@@ -77,12 +78,14 @@ nav .social-links img {
     font-size: 2.5em;
     color: #444;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .podcast-content h2 {
     font-size: 1.5em;
     color: #444;
     margin-top: 40px;
+    text-align: center;
 }
 
 .video-container {
