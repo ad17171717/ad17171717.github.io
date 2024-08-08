@@ -66,21 +66,21 @@ nav .social-links img {
     height: 30px;
 }
 
-.podcast-content {
+.podcast-content, .home-content {
     max-width: 800px;
     margin: 20px auto;
     padding: 0 20px;
     text-align: center;
 }
 
-.podcast-content h1 {
+.podcast-content h1, .home-content h1 {
     font-size: 2.5em;
     color: #444;
     margin-bottom: 20px;
     text-align: center;
 }
 
-.podcast-content h2 {
+.podcast-content h2, .home-content h2 {
     font-size: 1.5em;
     color: #444;
     margin-top: 40px;
@@ -129,7 +129,7 @@ footer {
     nav .nav-links li {
         margin: 10px 0;
     }
-    .podcast-content h1 {
+    .podcast-content h1, .home-content h1 {
         font-size: 2em;
     }
 }
