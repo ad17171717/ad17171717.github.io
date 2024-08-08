@@ -1,135 +1,44 @@
-<body style="background-color:darkgray;">
-
-<div class="header">
-  <head>
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="./img/logo_final.png">
-    <h1>Personal Website for Adrian Dolinay</h1>
-  </head>
-  </div> 
-
-
-<div class="section">
-
-        <h1>Portfolio:</h1>
-        <h2><a href= "youtube_portfolio.html">YouTube Videos</a></h2>
-        <h2><a href= "resume.html">Resume</a></h2>
-
-        <div class="video-container">
-            <div class="color-overlay"></div>
-            <video autoplay loop muted>
-                <source src="vid/code_loop_fin.mp4" type="video/mp4">
-            </video>
-    </div>
-  
-<div class="footer">
-  <a href="https://www.linkedin.com/in/adrian-dolinay-frm-96a289106/">
-   <img alt="linkedin" src="./img/linkedin.png"
-   width="60" height="60">
-</a>
-  
-  <a href="https://www.youtube.com/c/AdrianDolinay1">
-   <img alt="youtube" src="./img/youtube.png"
-   width="80" height="60">
-</a>
-
-</a>
-  
-  <a href="https://github.com/ad17171717">
-   <img alt="github" src="./img/github.png"
-   width="60" height="60">
-</a>
-
-</a>
-  
-  <a href="https://odysee.com/@adriandolinay:0">
-   <img alt="odysee" src="./img/odysee.png"
-   width="60" height="60">
-</a>
-  
-<style>
-  
-.header{
-  height: 60px;
-  position: sticky;
-  left: 0;
-  top: 0;
-  width: 100%;
-  font-family: "Verdana";
-  background-color:black;
-  color:#fff;
- }
-  
-.section {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  overflow: hidden;
-  align-items: center;
-  justify-content: center;
-}
-
-.section h1 {
-  text-align: center;
-  font-size: 6rem;
-  font-family: "Verdana";
-  padding: 20px;
-  margin: 15px;
-  z-index: 1;
-  display:inline;
-  background-color:black;
-  color:#fff;
-}
-  
-.section h2 {
-  text-align: left;
-  font-size: 4rem;
-  font-family: "Verdana";
-  padding: 20px;
-  margin: 15px;
-  z-index: 1;
-  background-color:black;
-  color:#fff;
-}
-  
-.video-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-}
-
-.color-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: lightgray;
-  width: 100%;
-  height: 100vh;
-  opacity: 0.5;
-}
-  
-.footer {
-  height: 60px;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  font-family: "Verdana";
-  background-color: black;
-  color: white;
-}
-
-  
-a { color:white } /* Globally */
-
-/* Each state */
-
-a:visited {text-decoration: none; color:white; }
-a:hover { text-decoration: none; color:white; }
-a:focus { text-decoration: none; color:white; }
-a:hover, a:active { text-decoration: none; color:white }
-  
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adrian Dolinay</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="assets/images/logo_final.png" alt="Adrian Dolinay Logo">
+                Adrian Dolinay
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="social-links">
+                <a href="https://github.com/ad17171717" target="_blank"><img src="assets/images/github.png" alt="GitHub"></a>
+                <a href="https://www.youtube.com/@AdrianDolinay" target="_blank"><img src="assets/images/youtube.png" alt="YouTube"></a>
+                <a href="https://www.linkedin.com/in/adrian-dolinay-frm-96a289106/" target="_blank"><img src="assets/images/linkedin.png" alt="LinkedIn"></a>
+                <a href="https://odysee.com/@adriandolinay:0" target="_blank"><img src="assets/images/odysee.png" alt="Odysee"></a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Welcome to Adrian Dolinay's Website</h1>
+            <p>Explore my projects and learn more about me.</p>
+        </section>
+        <section class="content">
+            <h2>Latest Projects</h2>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Adrian Dolinay. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
