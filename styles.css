@@ -91,10 +91,12 @@ main {
     background: #fff;
     padding: 20px;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .video-container {
     margin: 20px 0;
+    text-align: center;
 }
 
 .video-container iframe {
