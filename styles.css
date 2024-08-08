@@ -1,4 +1,4 @@
-/* Reset some basic elements for better cross-browser compatibility */
+
 * {
     margin: 0;
     padding: 0;
@@ -74,7 +74,7 @@ nav .social-links img {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #fff;
+    color: #333; 
 }
 
 .hero h1 {
@@ -103,7 +103,6 @@ footer {
     width: 100%;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     nav .nav-links {
         flex-direction: column;
