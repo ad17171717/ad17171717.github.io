@@ -93,6 +93,30 @@ main {
     margin-bottom: 20px;
 }
 
+.video-container {
+    margin: 20px 0;
+}
+
+.video-container iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+}
+
+.podcast-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.podcast-links a {
+    margin: 0 10px;
+}
+
+.podcast-links img {
+    height: 40px;
+}
+
 footer {
     background: #333;
     color: #fff;
