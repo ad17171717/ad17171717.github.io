@@ -150,6 +150,13 @@ footer {
     width: 100%;
 }
 
+.about-content {
+    text-align: center; 
+    max-width: 1700px;    
+    margin: 0 auto;      
+    padding: 40px;       
+}
+
 @media (max-width: 768px) {
     nav .nav-links {
         flex-direction: column;
