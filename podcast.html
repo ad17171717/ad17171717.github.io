@@ -31,20 +31,40 @@
     <main>
         <section class="podcast-content">
             <h1>The Aspiring STEM Geek</h1>
+            <div class="episode-dropdown">
+                <label for="episode-select">Select Podcast Episode:</label>
+                <select id="episode-select">
+                    <option value="episode2">Robotics with Damian Kozak - #2</option>
+                    <option value="episode1">Talking Tech with Matthew Handzy - #1</option>
+                </select>
+            </div>
             <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/sg3cX1B_v2Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe id="podcast-video" width="560" height="315" src="https://www.youtube.com/embed/TIpb_2nspk0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <h2>Podcast Available On</h2>
             <div class="podcast-links">
                 <a href="https://open.spotify.com/show/60dPNJbDPaPw7ru8g5btxV" target="_blank"><img src="assets/images/spotify.png" alt="Spotify"></a>
                 <a href="https://www.iheart.com/podcast/269-the-aspiring-stem-geek-202676097/" target="_blank"><img src="assets/images/iheart.png" alt="iHeart Radio"></a>
                 <a href="https://www.audible.com/pd/B0DC719SJQ?action_code=ASSGB149080119000H&share_location=pdp" target="_blank"><img src="assets/images/audible.png" alt="Audible"></a>
+                <a href="https://podcasts.apple.com/us/podcast/the-aspiring-stem-geek/id1765996824" target="_blank"><img src="assets/images/applepodcasts.png" alt="Apple Podcasts"></a> <!-- Apple Podcasts logo and link -->
             </div>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Adrian Dolinay. All rights reserved.</p>
     </footer>
-    <script src="script.js"></script>
+    <script>
+        const episodeSelect = document.getElementById('episode-select');
+        const podcastVideo = document.getElementById('podcast-video');
+
+        episodeSelect.addEventListener('change', function() {
+            const selectedEpisode = this.value;
+            if (selectedEpisode === 'episode1') {
+                podcastVideo.src = "https://www.youtube.com/embed/Rbjf5pnkK4w";
+            } else if (selectedEpisode === 'episode2') {
+                podcastVideo.src = "https://www.youtube.com/embed/TIpb_2nspk0"; 
+            }
+        });
+    </script>
 </body>
 </html>

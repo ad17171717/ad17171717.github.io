@@ -157,6 +157,25 @@ footer {
     padding: 40px;       
 }
 
+.episode-dropdown {
+    margin-bottom: 20px;
+    text-align: center; /* Center the dropdown */
+}
+
+.episode-dropdown label {
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+.episode-dropdown select {
+    font-size: 1em;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f4f4f4;
+    cursor: pointer;
+}
+
 @media (max-width: 768px) {
     nav .nav-links {
         flex-direction: column;
