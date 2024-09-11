@@ -6,6 +6,59 @@
     <title>Adrian Dolinay</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            height: 100%;
+        }
+
+        .home-content {
+            padding-top: 0px;
+            padding-bottom: 0px;
+            text-align: center;
+        }
+
+        .home-content h1 {
+            margin-bottom: 0px;
+        }
+
+        .blog-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .blog-dropdown {
+            margin-top: 10px; 
+        }
+
+        .blog-dropdown select {
+            margin-top: 10px;
+            padding: 8px;
+            font-size: 1em;
+        }
+
+        .blog-preview iframe {
+            width: 90vw; /* 90% of the viewport width */
+            height: 70vh; /* 70% of the viewport height */
+            border: none;
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -28,14 +81,39 @@
             </div>
         </nav>
     </header>
+
     <main>
         <section class="home-content">
             <h1>Welcome to Adrian Dolinay's Website</h1>
         </section>
+
+        <section class="blog-content">
+            <h2>Latest Blog Post</h2>
+            <div class="blog-dropdown">
+                <label for="blog-select">Select Blog Post:</label>
+                <br>
+                <select id="blog-select">
+                    <option value="post09112024.html">Steganography: Sept 11, 2024</option> <!-- Latest post -->
+                </select>
+            </div>
+            <div class="blog-preview">
+                <iframe id="blog-iframe" src="blog/post09112024.html" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
     </main>
+
     <footer>
         <p>&copy; 2024 Adrian Dolinay. All rights reserved.</p>
     </footer>
-    <script src="script.js"></script>
+
+    <script>
+        const blogSelect = document.getElementById('blog-select');
+        const blogIframe = document.getElementById('blog-iframe');
+
+        blogSelect.addEventListener('change', function() {
+            const selectedPost = this.value;
+            blogIframe.src = `blog/${selectedPost}`;
+        });
+    </script>
 </body>
 </html>

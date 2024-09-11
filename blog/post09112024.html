@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steganography: Sept 11, 2024</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .blog-content {
+            max-width: 100%;
+            height: 90vh;
+            padding: 20px;
+            overflow-y: auto;
+            box-sizing: border-box;
+        }
+
+        .video-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        iframe {
+            width: 100%;
+            height: 315px;
+            border: none;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="blog-content">
+            <h1>Steganography</h1>
+            <h2>Date: September 11th, 2024</h2>
+
+            <p>I came across Steganography while I was at graduate school learning about Cryptography. Steganography is the science of hiding information by embedding a secret message within an object (Meghanathan, 2015). The object can be in the physical world; for example, writing a message in lemon juice then revealing the message with heat. The object can also be in the electronic space where a text message is written to a PNG formatted image.</p>
+            <br>
+            <p>Steganography is similar to Cryptography because both fields attempt to hide information from unsolicited viewers. The most significant difference between the two is that Steganography does not attempt to hide the object with the embedded information. For an object such as a PNG image with an embedded message, the image may be viewable online, but it is not obvious that it contains a hidden message.</p>
+            <br>
+            <p>In the video below, I outline how Steganography can be applied with Python. The video illustrates how to embed a hidden message into a PNG image, how to decode the image, and reviews issues common in Steganography applications. You can find the notebook in the GitHub link below.</p>
+
+            <p><a href="https://github.com/ad17171717/YouTube-Tutorials/tree/main/Python/Steganography" target="_blank">Steganography Notebook on GitHub</a></p>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/NbghA0yq1lY" title="Steganography with Python" allowfullscreen></iframe>
+            </div>
+
+            <h3>References</h3>
+            <p>Meghanathan, N. (2015). Steganography. Retrieved from <a href="https://www.jsums.edu/nmeghanathan/files/2015/05/CSC439-Sp2013-10-Steganography.pdf" target="_blank">jsums.edu</a></p>
+        </section>
+    </main>
+</body>
+</html>
