@@ -134,6 +134,7 @@ nav .social-links img {
 }
 
 .book a {
+    font-weight: bold; /* Added bold text for book links */
     color: #000;
     text-decoration: underline;
     display: block;
