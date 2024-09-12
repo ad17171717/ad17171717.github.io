@@ -6,6 +6,51 @@
     <title>The Aspiring STEM Geek</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center;     /* Center vertically */
+            height: 100%;            /* Ensure the container takes the full height */
+            margin: 20px 0;
+        }
+
+        iframe {
+            width: 80vw;
+            height: 45vw;
+            max-width: 1000px;
+            max-height: 563px;
+            overflow: hidden; /* Hide scrollbars for iframe */
+        }
+
+        iframe::-webkit-scrollbar {
+            display: none;
+        }
+
+        iframe {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+
+        /* Ensure the iframe container takes the full height */
+        html, body {
+            height: 100%;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh; /* Make sure main content takes up at least 80% of the viewport height */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -39,7 +84,7 @@
                 </select>
             </div>
             <div class="video-container">
-                <iframe id="podcast-video" width="560" height="315" src="https://www.youtube.com/embed/TIpb_2nspk0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe id="podcast-video" src="https://www.youtube.com/embed/TIpb_2nspk0" allowfullscreen></iframe>
             </div>
             <h2>Podcast Available On</h2>
             <div class="podcast-links">
