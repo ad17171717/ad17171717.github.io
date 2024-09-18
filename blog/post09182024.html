@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Infinite Monkey Theorem: Sept 18, 2024</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript"
+        src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        .blog-container {
+            max-width: 1100px;
+            width: 100%;
+            margin: 0 auto; 
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .video-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            border: none;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        p {
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        blockquote {
+            text-align: center;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="blog-container">
+            <h1>The Infinite Monkey Theorem</h1>
+            <h2>Date: September 18th, 2024</h2>
+
+            <p>The Infinite Monkey Theorem is a fun way to explain concepts in Probability theory. A scenario is set where a monkey is given a keyboard and given an infinite amount of trials, the monkey will eventually write every known text, including the works of William Shakespeare. The basis of the theorem lies in Probability Theory. An event labeled as <em>almost surely</em> to happen means it will happen with a probability of 1 given an infinite number of trials. If the number of trials is finite, then the outcome that a monkey will write a Shakespeare work is no longer guaranteed and the probability is less than or equal to 1. (Marchlinski, 2023)</p>
+            <br>
+            <h2>Mathematical Proof</h2>
+
+            <p>
+            <strong>1.</strong> We assume that the keyboard has 26 keys represented by $k$. There is an equal probability that the monkey will type any of the characters on the keyboard $\frac{1}{k}$.
+            </p>
+            <p>
+            <strong>2.</strong> For a single trial, the probability of typing the target text $T$ depends on the number of keys on the keyboard $k$ and the number of characters in the text $n$: 
+            \[ P(T) = \left(\frac{1}{k}\right)^n = \frac{1}{k^n} \]
+            </p>
+            <p>
+            <strong>3.</strong> A successful outcome where the monkey correctly writes the text starting at the $i^{th}$ character is represented by $A_i$. The probability of a successful event is given by $P(A_i) = \frac{1}{k^n}$. Since the trials are independent, the joint probability of typing the text correctly in multiple independent trials is the product of individual probabilities:
+            \[ P(A_1 \cap A_2 \cdots \cap A_n) = P(A_1) \cdot P(A_2) \cdot \cdots \cdot P(A_n) \]
+            </p>
+            <p>
+            <strong>4.</strong> Given an infinite series of keystrokes, the probability that the text will be typed at least once is given by:
+            \[ P\left(\bigcup^{\infty}_{i=1} A_i\right) \]
+            </p>
+            <p>
+            <strong>5.</strong> Using the <a href="https://proofwiki.org/wiki/Second_Borel-Cantelli_Lemma" target="_blank">Second Borel-Cantelli Lemma</a>, we can show that if the trials are infinite, $\sum_{i=1}^{\infty}P(A_i)=\infty$, and the events $A_i$ are independent, then the probability that the text is typed by the monkey is almost surely 1:
+            \[ P\left( \limsup\limits_{i \to \infty} A_i \right) = 1 \]
+            </p>
+            <p>
+            <strong>6.</strong> The probability of typing the text $T$ in any specific block of $n$ characters is given by:
+            \[ P(T) = \frac{1}{k^n} \]
+            Since there are infinitely many independent trials, the sum of the probabilities of all such events is:
+            \[ \sum_{i=1}^{\infty} P(A_i) = \sum_{i=1}^{\infty} \frac{1}{k^n} = \infty \]
+            This means that with infinite trials, the probability that the text will be typed at least once is 1, which guarantees that the text will be typed "almost surely."
+            (Waliji, 2006), (Wang, 2023), (ProofWiki.org, 2024)
+            </p>
+            <br>
+
+            <p>From what I could find, Shakespeare never explicitly referenced infinity. But in <a href="https://www.poetryfoundation.org/poems/45087/sonnet-18-shall-i-compare-thee-to-a-summers-day" target="_blank">Sonnet 18</a>, he spoke of eternal beauty. I find the beauty and elegance in the mathematics of the theorem, and it may be eternal (or infinite) just as Shakespeare writes:</p>
+            <blockquote>
+            But thy eternal summer shall not fade,<br>
+            Nor lose possession of that fair thou ow’st;<br>
+            Nor shall death brag thou wander’st in his shade,<br>
+            When in eternal lines to time thou grow’st:<br>
+            So long as men can breathe or eyes can see,<br>
+            So long lives this, and this gives life to thee.
+            </blockquote>
+            <br>
+
+            <p>The video below reviews the proof for the Infinite Monkey Theorem and illustrates how concepts from the Theorem can be programmed with Python.</p>
+            <p><a href="https://github.com/ad17171717/YouTube-Tutorials/blob/main/Statistics%20with%20Python/Statistics%20with%20Python!%20Infinite%20Monkey%20Theorem.ipynb" target="_blank">Infinite Monkey Theorem Notebook on GitHub</a></p>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/h6KXcbiZpkE" title="Infinite Monkey Theorem with Python" allowfullscreen></iframe>
+            </div>
+
+            <h3>References</h3>
+            <p>Marchlinski, D. (2023). Probability and the Infinite Monkey Theorem. Retrieved from <a href="https://bpb-us-w2.wpmucdn.com/web.sas.upenn.edu/dist/e/952/files/2023/12/Marchlinski-Presentation-F23.pdf" target="_blank">web.sas.upenn.edu</a></p>
+            <p>ProofWiki.org. (2024). Retrieved from <a href="https://proofwiki.org/wiki/Second_Borel-Cantelli_Lemma" target="_blank">proofwiki.org</a></p>
+            <p>Waliji, M. (2006). Monkeys and Walks. Retrieved from <a href="https://math.uchicago.edu/~may/VIGRE/VIGRE2006/PAPERS/Waliji.pdf" target="_blank">math.uchicago.edu</a></p>
+            <p>Wang, Q. (2023). The Borel-Cantelli Lemma and the Growth Rate of Partial Maxima. Retrieved from <a href="https://sites.duke.edu/kits_team_101_48585/files/2023/03/The_Borel_Cantelli_Lemma_and_the_Growth_Rate_of_Partial_Maxima.pdf" target="_blank">sites.duke.edu</a></p>
+        </section>
+    </main>
+</body>
+</html>
