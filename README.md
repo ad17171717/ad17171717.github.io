@@ -1,1 +1,1 @@
-Personal Website for Adrian Dolinay
+Personal Website for Adrian Dolinay: adriandolinay.com
