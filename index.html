@@ -14,6 +14,63 @@
             height: 100%;
         }
 
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        .header-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-right: 40px;
+        }
+
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-grow: 1;
+        }
+
+        .nav-links li {
+            margin: 0 20px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        .social-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .social-links a {
+            margin-left: 10px;
+        }
+
+        .social-links img {
+            height: 30px;
+        }
+
         .home-content {
             padding-top: 0px;
             padding-bottom: 0px;
@@ -42,7 +99,7 @@
 
         .blog-dropdown label {
             margin-right: 10px;
-            font-size: 1.2em; 
+            font-size: 1.2em;
             font-weight: bold;
         }
 
@@ -52,8 +109,8 @@
         }
 
         .blog-preview iframe {
-            width: 90vw; 
-            height: 70vh; 
+            width: 90vw;
+            height: 70vh;
             border: none;
             margin-top: 20px;
         }
@@ -66,14 +123,29 @@
             position: relative;
             width: 100%;
         }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <nav>
+        <div class="header-center">
             <div class="logo">
                 <img src="assets/images/logo_final.png" alt="Adrian Dolinay Logo">
-                Adrian Dolinay 
+                Adrian Dolinay
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -87,7 +159,7 @@
                 <a href="https://www.linkedin.com/in/adrian-dolinay-frm-96a289106/" target="_blank"><img src="assets/images/linkedin.png" alt="LinkedIn"></a>
                 <a href="https://odysee.com/@adriandolinay:0" target="_blank"><img src="assets/images/odysee.png" alt="Odysee"></a>
             </div>
-        </nav>
+        </div>
     </header>
 
     <main>
@@ -100,12 +172,13 @@
             <div class="blog-dropdown">
                 <label for="blog-select">Select Blog Post:</label>
                 <select id="blog-select">
-                    <option value="post09182024.html" selected>The Infinite Monkey Theorem: Sept 18, 2024</option>
+                    <option value="post09252024.html" selected>Podcast Recommendation - Spatial Intelligence: Sept 25, 2024</option>
+                    <option value="post09182024.html">The Infinite Monkey Theorem: Sept 18, 2024</option>
                     <option value="post09112024.html">Steganography: Sept 11, 2024</option>
                 </select>
             </div>
             <div class="blog-preview">
-                <iframe id="blog-iframe" src="blog/post09182024.html" frameborder="0" allowfullscreen></iframe>
+                <iframe id="blog-iframe" src="blog/post09252024.html" frameborder="0" allowfullscreen></iframe>
             </div>
         </section>
     </main>
