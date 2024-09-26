@@ -3,16 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://polyfill.io https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com;">
+    <!-- Updated CSP to allow 'unsafe-inline' and necessary CDN for MathJax -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://polyfill.io https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com;">
     <title>The Infinite Monkey Theorem: Sept 18, 2024</title>
     <link rel="stylesheet" href="../styles.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    <script type="text/javascript">
+        window.MathJax = {
+          tex2jax: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+          },
+          skipStartupTypeset: true
+        };
     </script>
     <script type="text/javascript"
-        src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
     </script>
     <style>
         body, html {
@@ -122,5 +127,10 @@
             <p>Wang, Q. (2023). The Borel-Cantelli Lemma and the Growth Rate of Partial Maxima. Retrieved from <a href="https://sites.duke.edu/kits_team_101_48585/files/2023/03/The_Borel_Cantelli_Lemma_and_the_Growth_Rate_of_Partial_Maxima.pdf" target="_blank">sites.duke.edu</a></p>
         </section>
     </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+        });
+    </script>
 </body>
 </html>
