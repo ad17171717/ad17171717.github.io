@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://jupyter.adriandolinay.com; font-src 'self'; frame-src 'self' https://jupyter.adriandolinay.com;">
+    <title>Welcome to the Jupyter Coding Environment</title>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" sizes="16x16">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/png" sizes="32x32">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/png" sizes="48x48">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            height: 100%;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        .header-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-right: 40px;
+        }
+
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        .social-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .social-links a {
+            margin-left: 10px;
+        }
+
+        .social-links img {
+            height: 30px;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 160px);
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .credentials-input {
+            margin-bottom: 20px;
+        }
+
+        .credentials-input input {
+            padding: 10px;
+            margin: 10px;
+            font-size: 1em;
+            width: 200px;
+        }
+
+        .start-coding-button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: white;
+            background-color: blue;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 20px;
+        }
+
+        .start-coding-button:hover {
+            background-color: darkblue;
+        }
+
+        .iframe-container {
+            width: 90%;
+            height: 70vh;
+            border: none;
+            display: none;
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-center">
+            <div class="logo">
+                <img src="assets/images/logo_final.png" alt="Adrian Dolinay Logo">
+                Adrian Dolinay
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="podcast.html">Podcast</a></li>
+                <li><a href="book-recommendations.html">Book Recommendations</a></li>
+                <li><a href="coding-environment.html">Coding Environment</a></li>
+            </ul>
+            <div class="social-links">
+                <a href="https://github.com/ad17171717" target="_blank"><img src="assets/images/github.png" alt="GitHub"></a>
+                <a href="https://www.youtube.com/@AdrianDolinay" target="_blank"><img src="assets/images/youtube.png" alt="YouTube"></a>
+                <a href="https://www.linkedin.com/in/adrian-dolinay-frm-96a289106/" target="_blank"><img src="assets/images/linkedin.png" alt="LinkedIn"></a>
+                <a href="https://odysee.com/@adriandolinay:0" target="_blank"><img src="assets/images/odysee.png" alt="Odysee"></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h1>Welcome to the Jupyter Coding Environment</h1>
+        <div class="credentials-input">
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+        </div>
+        <button class="start-coding-button" onclick="startCodingEnvironment()">Start Coding Environment</button>
+        <iframe id="coding-iframe" class="iframe-container" src="" frameborder="0" allowfullscreen></iframe>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Adrian Dolinay. All rights reserved.</p>
+    </footer>
+
+    <script>
+        async function startCodingEnvironment() {
+            const iframe = document.getElementById('coding-iframe');
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                const authResponse = await fetch('https://jupyter.adriandolinay.com/api/authenticate', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    credentials: 'include', // Important: include credentials in subsequent requests
+                    body: JSON.stringify({
+                        username: username,
+                        password: password
+                    })
+                });
+
+                if (authResponse.ok) {
+                    const containerResponse = await fetch('https://jupyter.adriandolinay.com/api/create-container', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        credentials: 'include' // Include credentials to authenticate this request
+                    });
+
+                    if (containerResponse.ok) {
+                        const data = await containerResponse.json();
+                        iframe.src = data.notebookUrl;
+                        iframe.style.display = 'block';
+                    } else {
+                        alert('Failed to start coding environment. Please try again.');
+                    }
+                } else {
+                    alert('Authentication failed. Please check your credentials.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred while starting the coding environment.');
+            }
+        }
+    </script>
+</body>
+</html>
