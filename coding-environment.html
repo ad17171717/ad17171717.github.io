@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,8 @@
     <link rel="icon" href="assets/images/favicon.ico" type="image/png" sizes="48x48">
     <link rel="stylesheet" href="styles.css">
     <style>
-        body, html {
+        body,
+        html {
             margin: 0;
             padding: 0;
             overflow-x: hidden;
@@ -131,6 +133,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <div class="header-center">
@@ -178,11 +181,10 @@
                 const authResponse = await fetch('https://jupyter.adriandolinay.com/api/authenticate', {
                     method: 'POST',
                     headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
                     },
                     credentials: 'include', // Important: include credentials in subsequent requests
-                    mode: 'cors', // Ensure cross-origin requests are handled properly
+                    mode: 'cors',
                     body: JSON.stringify({
                         username: username,
                         password: password
@@ -193,11 +195,10 @@
                     const containerResponse = await fetch('https://jupyter.adriandolinay.com/api/create-container', {
                         method: 'POST',
                         headers: {
-                            'Content-Type': 'application/json',
-                            'Accept': 'application/json',
+                            'Content-Type': 'application/json'
                         },
                         credentials: 'include', // Include credentials to authenticate this request
-                        mode: 'cors' // Ensure cross-origin requests are handled properly
+                        mode: 'cors'
                     });
 
                     if (containerResponse.ok) {
@@ -217,4 +218,5 @@
         }
     </script>
 </body>
+
 </html>
