@@ -178,9 +178,11 @@
                 const authResponse = await fetch('https://jupyter.adriandolinay.com/api/authenticate', {
                     method: 'POST',
                     headers: {
-                        'Content-Type': 'application/json'
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json',
                     },
                     credentials: 'include', // Important: include credentials in subsequent requests
+                    mode: 'cors', // Ensure cross-origin requests are handled properly
                     body: JSON.stringify({
                         username: username,
                         password: password
@@ -191,9 +193,11 @@
                     const containerResponse = await fetch('https://jupyter.adriandolinay.com/api/create-container', {
                         method: 'POST',
                         headers: {
-                            'Content-Type': 'application/json'
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json',
                         },
-                        credentials: 'include' // Include credentials to authenticate this request
+                        credentials: 'include', // Include credentials to authenticate this request
+                        mode: 'cors' // Ensure cross-origin requests are handled properly
                     });
 
                     if (containerResponse.ok) {
