@@ -73,7 +73,6 @@ nav .social-links img {
     text-align: center;
 }
 
-/* Ensures that h1 and h2 are centered within their container */
 .podcast-content h1, .home-content h1, .book-content h1, .blog-content h1 {
     font-size: 2.5em;
     color: #444;
@@ -153,10 +152,15 @@ footer {
 }
 
 .about-content {
-    text-align: center; 
+    text-align: left; 
     max-width: 1700px;    
     margin: 0 auto;      
     padding: 40px;       
+}
+
+.about-content h1 {
+    text-align: center; 
+    margin: 20px 0; 
 }
 
 .episode-dropdown {
@@ -199,4 +203,18 @@ footer {
         width: 100%;
         height: auto;
     }
+}
+
+.image-section {
+    margin: 0; 
+    padding: 0; 
+    text-align: center;
+}
+
+.image-section .centered-image {
+    max-width: 40%; 
+    width: 30%; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
 }
