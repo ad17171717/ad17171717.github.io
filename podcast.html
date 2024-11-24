@@ -7,50 +7,6 @@
     <title>The Aspiring STEM Geek</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-        }
-
-        .video-container {
-            display: flex;
-            justify-content: center;  
-            align-items: center;    
-            height: 100%;         
-            margin: 20px 0;
-        }
-
-        iframe {
-            width: 80vw;
-            height: 45vw;
-            max-width: 1000px;
-            max-height: 563px;
-            overflow: hidden;
-        }
-
-        iframe::-webkit-scrollbar {
-            display: none;
-        }
-
-        iframe {
-            -ms-overflow-style: none;
-            scrollbar-width: none; 
-        }
-
-        html, body {
-            height: 100%;
-        }
-
-        main {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 40vh; 
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -102,24 +58,24 @@
         <p>&copy; 2024 Adrian Dolinay. All rights reserved.</p>
     </footer>
     <script>
-        const episodeSelect = document.getElementById('episode-select');
-        const podcastVideo = document.getElementById('podcast-video');
+        document.addEventListener('DOMContentLoaded', () => {
+            const episodeSelect = document.getElementById('episode-select');
+            const podcastVideo = document.getElementById('podcast-video');
 
-        // Map of episodes to YouTube embed links
-        const episodes = {
-            episode1: "https://www.youtube.com/embed/Rbjf5pnkK4w",
-            episode2: "https://www.youtube.com/embed/TIpb_2nspk0",
-            episode3: "https://www.youtube.com/embed/HDTf9yqTUzI",
-            episode4: "https://www.youtube.com/embed/VP1uZ51vHm4",
-            episode5: "https://www.youtube.com/embed/0vL5qU5qWJg"
-        };
+            const episodes = {
+                episode1: "https://www.youtube.com/embed/Rbjf5pnkK4w",
+                episode2: "https://www.youtube.com/embed/TIpb_2nspk0",
+                episode3: "https://www.youtube.com/embed/HDTf9yqTUzI",
+                episode4: "https://www.youtube.com/embed/VP1uZ51vHm4",
+                episode5: "https://www.youtube.com/embed/0vL5qU5qWJg"
+            };
 
-        // Event listener for dropdown selection
-        episodeSelect.addEventListener('change', function () {
-            const selectedEpisode = this.value;
-            if (episodes[selectedEpisode]) {
-                podcastVideo.src = episodes[selectedEpisode];
-            }
+            episodeSelect.addEventListener('change', function () {
+                const selectedEpisode = this.value;
+                if (episodes[selectedEpisode]) {
+                    podcastVideo.src = episodes[selectedEpisode];
+                }
+            });
         });
     </script>
 </body>
