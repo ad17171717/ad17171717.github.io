@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.youtube.com https://www.youtube-nocookie.com; style-src 'self'; img-src 'self' data:; connect-src 'self'; font-src 'self'; frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com blob:;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.youtube.com https://www.youtube-nocookie.com; style-src 'self'; img-src 'self' data:; connect-src 'self'; font-src 'self'; frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com;">
     <title>The Aspiring STEM Geek</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
@@ -105,17 +105,21 @@
         const episodeSelect = document.getElementById('episode-select');
         const podcastVideo = document.getElementById('podcast-video');
 
+        // Map of episodes to YouTube embed links
         const episodes = {
             episode1: "https://www.youtube.com/embed/Rbjf5pnkK4w",
             episode2: "https://www.youtube.com/embed/TIpb_2nspk0",
-            episode3: "https://www.youtube.com/embed/HDTf9yqTUzI?si=FdJv655cKkd6bCyi",
-            episode4: "https://www.youtube.com/embed/VP1uZ51vHm4?si=blbVT-K2QnCDxo9T",
-            episode5: "https://www.youtube.com/embed/0vL5qU5qWJg?si=hRR4yi0KM9L1iw-N"
+            episode3: "https://www.youtube.com/embed/HDTf9yqTUzI",
+            episode4: "https://www.youtube.com/embed/VP1uZ51vHm4",
+            episode5: "https://www.youtube.com/embed/0vL5qU5qWJg"
         };
 
-        episodeSelect.addEventListener('change', function() {
+        // Event listener for dropdown selection
+        episodeSelect.addEventListener('change', function () {
             const selectedEpisode = this.value;
-            podcastVideo.src = episodes[selectedEpisode];
+            if (episodes[selectedEpisode]) {
+                podcastVideo.src = episodes[selectedEpisode];
+            }
         });
     </script>
 </body>
