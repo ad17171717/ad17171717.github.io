@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.youtube.com https://www.youtube-nocookie.com; style-src 'self'; img-src 'self' data:; connect-src 'self'; font-src 'self'; frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com;">
     <title>The Aspiring STEM Geek</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
@@ -29,53 +29,38 @@
             </div>
         </nav>
     </header>
+
     <main>
         <section class="podcast-content">
             <h1>The Aspiring STEM Geek</h1>
             <div class="episode-dropdown">
                 <label for="episode-select">Select Podcast Episode:</label>
                 <select id="episode-select">
-                    <option value="episode5" selected>Cybersecurity with Ben Kofman - #5</option>
-                    <option value="episode4">Software, AI and ML with Taziamoma Abraham - #4</option>
-                    <option value="episode3">Tech News with Adrian Dolinay - #3</option>
-                    <option value="episode2">Robotics with Damian Kozak - #2</option>
-                    <option value="episode1">Talking Tech with Matthew Handzy - #1</option>
+                    <option value="https://www.youtube.com/embed/0vL5qU5qWJg" selected>Cybersecurity with Ben Kofman - #5</option>
+                    <option value="https://www.youtube.com/embed/VP1uZ51vHm4">Software, AI and ML with Taziamoma Abraham - #4</option>
+                    <option value="https://www.youtube.com/embed/HDTf9yqTUzI">Tech News with Adrian Dolinay - #3</option>
+                    <option value="https://www.youtube.com/embed/TIpb_2nspk0">Robotics with Damian Kozak - #2</option>
+                    <option value="https://www.youtube.com/embed/Rbjf5pnkK4w">Talking Tech with Matthew Handzy - #1</option>
                 </select>
             </div>
             <div class="video-container">
-                <iframe id="podcast-video" src="https://www.youtube.com/embed/0vL5qU5qWJg" allowfullscreen></iframe>
-            </div>
-            <h2>Podcast Available On</h2>
-            <div class="podcast-links">
-                <a href="https://open.spotify.com/show/60dPNJbDPaPw7ru8g5btxV" target="_blank"><img src="assets/images/spotify.png" alt="Spotify"></a>
-                <a href="https://www.iheart.com/podcast/269-the-aspiring-stem-geek-202676097/" target="_blank"><img src="assets/images/iheart.png" alt="iHeart Radio"></a>
-                <a href="https://www.audible.com/pd/B0DC719SJQ?action_code=ASSGB149080119000H&share_location=pdp" target="_blank"><img src="assets/images/audible.png" alt="Audible"></a>
-                <a href="https://podcasts.apple.com/us/podcast/the-aspiring-stem-geek/id1765996824" target="_blank"><img src="assets/images/applepodcasts.png" alt="Apple Podcasts"></a>
+                <iframe id="podcast-video" src="https://www.youtube.com/embed/0vL5qU5qWJg" frameborder="0" allowfullscreen></iframe>
             </div>
         </section>
     </main>
+
     <footer>
         <p>&copy; 2024 Adrian Dolinay. All rights reserved.</p>
     </footer>
+
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const episodeSelect = document.getElementById('episode-select');
-            const podcastVideo = document.getElementById('podcast-video');
+        const episodeSelect = document.getElementById('episode-select');
+        const podcastVideo = document.getElementById('podcast-video');
 
-            const episodes = {
-                episode1: "https://www.youtube.com/embed/Rbjf5pnkK4w",
-                episode2: "https://www.youtube.com/embed/TIpb_2nspk0",
-                episode3: "https://www.youtube.com/embed/HDTf9yqTUzI",
-                episode4: "https://www.youtube.com/embed/VP1uZ51vHm4",
-                episode5: "https://www.youtube.com/embed/0vL5qU5qWJg"
-            };
-
-            episodeSelect.addEventListener('change', function () {
-                const selectedEpisode = this.value;
-                if (episodes[selectedEpisode]) {
-                    podcastVideo.src = episodes[selectedEpisode];
-                }
-            });
+        episodeSelect.addEventListener('change', function() {
+            const selectedSrc = this.value;
+            console.log('Changing iframe src to:', selectedSrc);
+            podcastVideo.src = selectedSrc;
         });
     </script>
 </body>
