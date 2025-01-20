@@ -1,9 +1,11 @@
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body Styling */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
@@ -11,6 +13,7 @@ body {
     color: #333;
 }
 
+/* Header */
 header {
     background-color: #333;
     color: #fff;
@@ -66,6 +69,7 @@ nav .social-links img {
     height: 30px;
 }
 
+/* Page Sections */
 .podcast-content, .home-content, .book-content, .blog-content {
     max-width: 1200px;
     margin: 20px auto;
@@ -88,6 +92,7 @@ nav .social-links img {
     text-align: center;
 }
 
+/* Video Container */
 .video-container {
     margin: 20px 0;
     text-align: center;
@@ -99,30 +104,75 @@ nav .social-links img {
     height: 315px;
 }
 
-.podcast-links {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+/* Dropdown and Labels */
+.dynamic-label {
+    font-size: calc(1.2em + 0.3vw);
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: inline-block;
 }
 
-.podcast-links a {
-    margin: 0 10px;
+.dynamic-select {
+    font-size: calc(1em + 0.2vw);
+    padding: 8px;
+    max-width: 90%;
+    width: auto;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f4f4f4;
+    cursor: pointer;
+    text-align: center;
 }
 
-.podcast-links img {
-    height: 40px;
+/* Responsiveness */
+@media (max-width: 768px) {
+    nav .nav-links {
+        flex-direction: column;
+    }
+
+    nav .nav-links li {
+        margin: 10px 0;
+    }
+
+    .podcast-content h1, .home-content h1, .book-content h1, .blog-content h1 {
+        font-size: 2em;
+    }
+
+    .books-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .book {
+        width: 100%;
+    }
+
+    .book img {
+        width: 100%;
+        height: auto;
+    }
+
+    .dynamic-label {
+        font-size: calc(1em + 0.5vw);
+    }
+
+    .dynamic-select {
+        font-size: calc(0.9em + 0.4vw);
+        width: 100%;
+    }
 }
 
+/* Books Section */
 .books-row {
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
-    flex-wrap: wrap;  
+    flex-wrap: wrap;
     margin-bottom: 40px;
 }
 
 .book {
-    width: 23%;  
+    width: 23%;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -130,17 +180,18 @@ nav .social-links img {
 .book img {
     width: 100%;
     height: 300px;
-    object-fit: contain; 
+    object-fit: contain;
 }
 
 .book a {
-    font-weight: bold; 
+    font-weight: bold;
     color: #000;
     text-decoration: underline;
     display: block;
     margin-top: 10px;
 }
 
+/* Footer */
 footer {
     background: #333;
     color: #fff;
@@ -151,70 +202,30 @@ footer {
     width: 100%;
 }
 
+/* About Section */
 .about-content {
-    text-align: left; 
-    max-width: 1700px;    
-    margin: 0 auto;      
-    padding: 40px;       
+    text-align: left;
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 40px;
 }
 
 .about-content h1 {
-    text-align: center; 
-    margin: 20px 0; 
-}
-
-.episode-dropdown {
-    margin-bottom: 20px;
     text-align: center;
+    margin: 20px 0;
 }
 
-.episode-dropdown label {
-    font-size: 1.2em;
-    margin-right: 10px;
-}
-
-.episode-dropdown select {
-    font-size: 1em;
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    background-color: #f4f4f4;
-    cursor: pointer;
-}
-
-@media (max-width: 768px) {
-    nav .nav-links {
-        flex-direction: column;
-    }
-    nav .nav-links li {
-        margin: 10px 0;
-    }
-    .podcast-content h1, .home-content h1, .book-content h1, .blog-content h1 {
-        font-size: 2em;
-    }
-    .books-row {
-        flex-direction: column;
-        align-items: center;
-    }
-    .book {
-        width: 100%;
-    }
-    .book img {
-        width: 100%;
-        height: auto;
-    }
-}
-
+/* Images */
 .image-section {
-    margin: 0; 
-    padding: 0; 
+    margin: 0;
+    padding: 0;
     text-align: center;
 }
 
 .image-section .centered-image {
-    max-width: 70%; 
-    width: 40%; 
-    height: auto; 
-    display: block; 
-    margin: 0 auto; 
+    max-width: 70%;
+    width: 40%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }

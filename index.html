@@ -7,130 +7,6 @@
     <title>Adrian Dolinay</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
-    <style>
-        /* Match the about.html header styles */
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px 20px;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            font-size: 1.5em;
-            font-weight: bold;
-        }
-
-        .logo img {
-            height: 40px;
-            margin-right: 10px;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-        }
-
-        .nav-links li {
-            margin-left: 20px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: white;
-            font-size: 1em;
-        }
-
-        .social-links {
-            display: flex;
-            align-items: center;
-        }
-
-        .social-links a {
-            margin-left: 10px;
-        }
-
-        .social-links img {
-            height: 30px;
-        }
-
-        .home-content {
-            text-align: center;
-            padding: 40px 20px;
-        }
-
-        .blog-content {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            padding: 20px;
-        }
-
-        .blog-dropdown {
-            margin-top: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .blog-dropdown label {
-            margin-right: 10px;
-            font-size: 1.2em;
-            font-weight: bold;
-        }
-
-        .blog-dropdown select {
-            padding: 8px;
-            font-size: 1em;
-        }
-
-        .blog-preview iframe {
-            width: 90vw;
-            height: 70vh;
-            border: none;
-            margin-top: 20px;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 20px;
-        }
-
-        @media (max-width: 768px) {
-            header {
-                padding: 10px 20px;
-            }
-
-            nav {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .nav-links {
-                flex-direction: column;
-                margin-top: 10px;
-            }
-
-            .nav-links li {
-                margin: 10px 0;
-            }
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -162,8 +38,8 @@
         <section class="blog-content">
             <h2>Latest Blog Post</h2>
             <div class="blog-dropdown">
-                <label for="blog-select">Select Blog Post:</label>
-                <select id="blog-select">
+                <label for="blog-select" class="dynamic-label">Select Blog Post:</label>
+                <select id="blog-select" class="dynamic-select">
                     <option value="post01082025.html" selected>Hiking Quandary Peak: Jan 8, 2025</option>
                     <option value="post09252024.html">Podcast Recommendation - Spatial Intelligence: Sept 25, 2024</option>
                     <option value="post09182024.html">The Infinite Monkey Theorem: Sept 18, 2024</option>

@@ -34,8 +34,8 @@
         <section class="podcast-content">
             <h1>The Aspiring STEM Geek</h1>
             <div class="episode-dropdown">
-                <label for="episode-select">Select Podcast Episode:</label>
-                <select id="episode-select">
+                <label for="episode-select" class="dynamic-label">Select Podcast Episode:</label>
+                <select id="episode-select" class="dynamic-select">
                     <option value="https://www.youtube.com/embed/Czp-ofGjnWI" selected>Engineering, Finance and Teaching with Ronald Anderson - #7</option>
                     <option value="https://www.youtube.com/embed/irM7TzWXlz0">Music and Audio Technology with Evan McIntyre and Chris Krochak - #6</option>
                     <option value="https://www.youtube.com/embed/0vL5qU5qWJg">Cybersecurity with Ben Kofman - #5</option>
@@ -59,7 +59,7 @@
         const episodeSelect = document.getElementById('episode-select');
         const podcastVideo = document.getElementById('podcast-video');
 
-        episodeSelect.addEventListener('change', function() {
+        episodeSelect.addEventListener('change', function () {
             const selectedSrc = this.value;
             console.log('Changing iframe src to:', selectedSrc);
             podcastVideo.src = selectedSrc;
