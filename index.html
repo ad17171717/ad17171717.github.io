@@ -81,12 +81,17 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Adrian Dolinay. All rights reserved.</p>
+        <p>&copy; <span id="current-year">2026</span> Adrian Dolinay. All rights reserved.</p>
     </footer>
 
     <script>
         const blogSelect = document.getElementById('blog-select');
         const blogIframe = document.getElementById('blog-iframe');
+        const yearSpan = document.getElementById('current-year');
+
+        if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+        }
 
         blogSelect.addEventListener('change', function() {
             const selectedPost = this.value;

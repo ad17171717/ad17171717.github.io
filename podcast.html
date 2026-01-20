@@ -66,12 +66,17 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Adrian Dolinay. All rights reserved.</p>
+        <p>&copy; <span id="current-year">2026</span> Adrian Dolinay. All rights reserved.</p>
     </footer>
 
     <script>
         const episodeSelect = document.getElementById('episode-select');
         const podcastVideo = document.getElementById('podcast-video');
+        const yearSpan = document.getElementById('current-year');
+
+        if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+        }
 
         episodeSelect.addEventListener('change', function () {
             const selectedSrc = this.value;
