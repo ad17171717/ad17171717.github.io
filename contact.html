@@ -3,12 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self'; img-src 'self' data:; connect-src 'self'; font-src 'self';">
-    <title>About - Adrian Dolinay</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self';">
+    <title>Contact - Adrian Dolinay</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <style>
+        .contact-content {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .contact-content h1 {
+            font-size: 2.5em;
+            color: #444;
+            margin-bottom: 30px;
+        }
+
+        .contact-content p {
+            font-size: 1.15em;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .contact-email {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #000;
+            text-decoration: underline;
+        }
+
+        .contact-email:hover {
+            color: #555;
+        }
+    </style>
 </head>
-<body class="about-page">
+<body>
     <header>
         <nav>
             <div class="logo">
@@ -31,27 +65,10 @@
         </nav>
     </header>
     <main>
-        <section class="image-section">
-            <img src="assets/images/background_website.png" alt="Decorative background" class="centered-image">
-        </section>
-        <section class="about-content">
-            <h1>Welcome To My Site!</h1>
-            <p>
-                Hi everyone! Here I want to share what I've learned in programming, statistics, 
-                data science, finance, and other fields through my career.
-            </p>
-            <h1>About Me</h1>
-            <p>
-                I initially started my career in the financial field. I worked in a variety of roles: 
-                wealth management, portfolio management, investment analysis, and risk management. I 
-                earned the Financial Risk Manager (FRM) designation in 2020.
-            </p>
-            <p>
-                While I was working in finance, I was introduced to Python and fell in love with programming 
-                and statistics. I started learning by creating simple scripts to value stock options. 
-                Eventually, I decided I wanted to leave the financial field and attended graduate school 
-                to study Statistics.
-            </p>
+        <section class="contact-content">
+            <h1>Contact</h1>
+            <p>Are you interested in coming onto the podcast to talk about a STEM topic? Do you have a recommendation for a YouTube tutorial idea? Contact Adrian!</p>
+            <a href="mailto:adriandolinay@adriandolinay.com" class="contact-email">adriandolinay@adriandolinay.com</a>
         </section>
     </main>
     <footer>
