@@ -110,6 +110,19 @@
             console.log('Changing iframe src to:', selectedSrc);
             podcastVideo.src = selectedSrc;
         });
+
+        const params = new URLSearchParams(window.location.search);
+        const epParam = params.get('episode');
+        if (epParam) {
+            const options = episodeSelect.options;
+            for (let i = 0; i < options.length; i++) {
+                if (options[i].text.includes('#' + epParam)) {
+                    episodeSelect.selectedIndex = i;
+                    podcastVideo.src = options[i].value;
+                    break;
+                }
+            }
+        }
     </script>
 </body>
 </html>
