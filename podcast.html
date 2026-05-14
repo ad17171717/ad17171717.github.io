@@ -111,18 +111,22 @@
             podcastVideo.src = selectedSrc;
         });
 
-        const params = new URLSearchParams(window.location.search);
-        const epParam = params.get('episode');
-        if (epParam) {
-            const options = episodeSelect.options;
-            for (let i = 0; i < options.length; i++) {
-                if (options[i].text.includes('#' + epParam)) {
-                    episodeSelect.selectedIndex = i;
-                    podcastVideo.src = options[i].value;
-                    break;
+        function selectEpisodeFromURL() {
+            const params = new URLSearchParams(window.location.search);
+            const epParam = params.get('episode');
+            if (epParam) {
+                const options = episodeSelect.options;
+                for (let i = 0; i < options.length; i++) {
+                    if (options[i].text.includes('#' + epParam)) {
+                        episodeSelect.selectedIndex = i;
+                        podcastVideo.src = options[i].value;
+                        break;
+                    }
                 }
             }
         }
+
+        window.addEventListener('pageshow', selectEpisodeFromURL);
     </script>
 </body>
 </html>
