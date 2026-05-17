@@ -1,3 +1,8 @@
+/* Scrollbar Gutter Fix */
+html {
+    scrollbar-gutter: stable;
+}
+
 /* General Reset */
 * {
     margin: 0;
