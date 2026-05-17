@@ -3,6 +3,11 @@ html {
     scrollbar-gutter: stable;
 }
 
+/* Smooth cross-page navigation (Chrome/Edge; gracefully degrades elsewhere) */
+@view-transition {
+    navigation: auto;
+}
+
 /* General Reset */
 * {
     margin: 0;
