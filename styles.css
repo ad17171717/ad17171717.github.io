@@ -170,7 +170,77 @@ nav .social-links img {
     text-align: center;
 }
 
-/* Responsiveness - Mobile */
+/* Books Section */
+.books-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.book {
+    width: 23%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.book img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+}
+
+.book a {
+    font-weight: bold;
+    color: #000;
+    text-decoration: underline;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* About Section */
+.about-content {
+    text-align: left;
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.about-content h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Images */
+.image-section {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.image-section .centered-image {
+    max-width: 70%;
+    width: 40%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* ==============================================
+   MOBILE STYLES (must come last to override above)
+   ============================================== */
 @media (max-width: 768px) {
     body {
         padding-top: 58px;
@@ -268,20 +338,33 @@ nav .social-links img {
         font-size: 1.25em;
     }
 
+    /* Book grid stacks vertically on mobile, centered */
     .books-row {
         flex-direction: column;
         align-items: center;
-        gap: 30px;
+        gap: 40px;
+        padding: 0 20px;
     }
 
     .book {
-        width: 80%;
-        max-width: 250px;
+        width: 100%;
+        max-width: 280px;
+        margin-bottom: 0;
+        text-align: center;
     }
 
     .book img {
         width: 100%;
+        max-width: 220px;
         height: auto;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .book a {
+        font-size: 1em;
+        line-height: 1.4;
+        margin-top: 12px;
     }
 
     .dynamic-label {
@@ -293,72 +376,4 @@ nav .social-links img {
         width: 100%;
         max-width: 100%;
     }
-}
-
-/* Books Section */
-.books-row {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
-}
-
-.book {
-    width: 23%;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.book img {
-    width: 100%;
-    height: 300px;
-    object-fit: contain;
-}
-
-.book a {
-    font-weight: bold;
-    color: #000;
-    text-decoration: underline;
-    display: block;
-    margin-top: 10px;
-}
-
-/* Footer */
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-/* About Section */
-.about-content {
-    text-align: left;
-    max-width: 1700px;
-    margin: 0 auto;
-    padding: 40px;
-}
-
-.about-content h1 {
-    text-align: center;
-    margin: 20px 0;
-}
-
-/* Images */
-.image-section {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-.image-section .centered-image {
-    max-width: 70%;
-    width: 40%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
 }
