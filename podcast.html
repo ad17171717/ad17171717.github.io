@@ -14,17 +14,6 @@
     <title>The Aspiring STEM Geek</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
-    <style>
-        .podcast-description {
-            max-width: 680px;
-            margin: 0 auto 2rem auto;
-            padding-top: 1rem;
-            border-top: 1px solid #e0e0e0;
-            font-size: 1.05rem;
-            line-height: 1.75;
-            color: #444;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -41,10 +30,10 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             <div class="social-links">
-                <a href="https://github.com/ad17171717" target="_blank"><img src="assets/images/github.png" alt="GitHub"></a>
-                <a href="https://www.youtube.com/@AdrianDolinay" target="_blank"><img src="assets/images/youtube.png" alt="YouTube"></a>
-                <a href="https://www.linkedin.com/in/adrian-dolinay-frm-96a289106/" target="_blank"><img src="assets/images/linkedin.png" alt="LinkedIn"></a>
-                <a href="https://odysee.com/@adriandolinay:0" target="_blank"><img src="assets/images/odysee.png" alt="Odysee"></a>
+                <a href="https://github.com/ad17171717" target="_blank" rel="noopener noreferrer"><img src="assets/images/github.png" alt="GitHub"></a>
+                <a href="https://www.youtube.com/@AdrianDolinay" target="_blank" rel="noopener noreferrer"><img src="assets/images/youtube.png" alt="YouTube"></a>
+                <a href="https://www.linkedin.com/in/adrian-dolinay-frm-96a289106/" target="_blank" rel="noopener noreferrer"><img src="assets/images/linkedin.png" alt="LinkedIn"></a>
+                <a href="https://odysee.com/@adriandolinay:0" target="_blank" rel="noopener noreferrer"><img src="assets/images/odysee.png" alt="Odysee"></a>
             </div>
         </nav>
     </header>
@@ -52,13 +41,14 @@
     <main>
         <section class="podcast-content">
             <h1>The Aspiring STEM Geek</h1>
+
             <p class="podcast-description">
                 The Aspiring STEM Geek is a podcast I created to have a casual conversation with people that work in or are interested in Science, Math, Engineering and Technology fields. The experience levels range from early career to decades of experience and the topics of discussion range from deep dives into data centers and chile peppers to what video games the guests are playing or what books they are reading. Hopefully there is an episode in the archive that interests you!
             </p>
+
             <div class="episode-dropdown">
                 <label for="episode-select" class="dynamic-label">Select Podcast Episode:</label>
                 <select id="episode-select" class="dynamic-select">
-
                     <option value="https://www.youtube.com/embed/Lh2vmN_QQV8?si=LbYs4RbveWBhTexQ" selected>Nutritional Physiology with Emily Howard - #26</option>
                     <option value="https://www.youtube.com/embed/eYpN0QSfUFc?si=IbLuXgB5NT20h1gu">Volcanoes with Natália Gauer Pasqualon - #25</option>
                     <option value="https://www.youtube.com/embed/h6fC1sSm2Gg">Hydrology with Eric Larson - #24</option>
@@ -85,12 +75,34 @@
                     <option value="https://www.youtube.com/embed/HDTf9yqTUzI">Tech News with Adrian Dolinay - #3</option>
                     <option value="https://www.youtube.com/embed/TIpb_2nspk0">Robotics with Damian Kozak - #2</option>
                     <option value="https://www.youtube.com/embed/Rbjf5pnkK4w">Talking Tech with Matthew Handzy - #1</option>
-
                 </select>
             </div>
+
             <div class="video-container">
                 <iframe id="podcast-video" src="https://www.youtube.com/embed/Lh2vmN_QQV8?si=LbYs4RbveWBhTexQ" frameborder="0" allowfullscreen></iframe>
             </div>
+
+            <section class="podcast-platforms" aria-labelledby="podcast-platforms-heading">
+                <h2 id="podcast-platforms-heading">Also Available On</h2>
+
+                <div class="platform-links">
+                    <a href="https://podcasts.apple.com/podcast/id1765996824" target="_blank" rel="noopener noreferrer" aria-label="Listen on Apple Podcasts">
+                        <img src="assets/images/applepodcasts.png" alt="Apple Podcasts">
+                    </a>
+
+                    <a href="https://open.spotify.com/show/60dPNJbDPaPw7ru8g5btxV" target="_blank" rel="noopener noreferrer" aria-label="Listen on Spotify">
+                        <img src="assets/images/spotify.png" alt="Spotify">
+                    </a>
+
+                    <a href="https://iheart.com/podcast/269-202676097" target="_blank" rel="noopener noreferrer" aria-label="Listen on iHeart Radio">
+                        <img src="assets/images/iheart.png" alt="iHeart Radio">
+                    </a>
+
+                    <a href="https://audible.com/pd/B0DC73S9SN" target="_blank" rel="noopener noreferrer" aria-label="Listen on Audible">
+                        <img src="assets/images/audible.png" alt="Audible">
+                    </a>
+                </div>
+            </section>
         </section>
     </main>
 
@@ -99,37 +111,5 @@
     </footer>
 
     <script src="script.js"></script>
-    <script>
-        const episodeSelect = document.getElementById('episode-select');
-        const podcastVideo = document.getElementById('podcast-video');
-        const yearSpan = document.getElementById('current-year');
-
-        if (yearSpan) {
-            yearSpan.textContent = new Date().getFullYear();
-        }
-
-        episodeSelect.addEventListener('change', function () {
-            const selectedSrc = this.value;
-            console.log('Changing iframe src to:', selectedSrc);
-            podcastVideo.src = selectedSrc;
-        });
-
-        function selectEpisodeFromURL() {
-            const params = new URLSearchParams(window.location.search);
-            const epParam = params.get('episode');
-            if (epParam) {
-                const options = episodeSelect.options;
-                for (let i = 0; i < options.length; i++) {
-                    if (options[i].text.includes('#' + epParam)) {
-                        episodeSelect.selectedIndex = i;
-                        podcastVideo.src = options[i].value;
-                        break;
-                    }
-                }
-            }
-        }
-
-        window.addEventListener('pageshow', selectEpisodeFromURL);
-    </script>
 </body>
 </html>
