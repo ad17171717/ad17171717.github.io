@@ -1,121 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net; font-src 'self'; frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com;">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6SNN7H908D"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-6SNN7H908D');
-    </script>
-    <title>The Aspiring STEM Geek</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net; font-src 'self'; frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com;">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6SNN7H908D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6SNN7H908D');
+  </script>
+  <title>The Aspiring STEM Geek</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="assets/images/logo_final.webp" alt="Adrian Dolinay Logo">
-                Adrian Dolinay
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="podcast.html">Podcast</a></li>
-                <li><a href="book-recommendations.html">Book Recommendations</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="social-links">
-                <a href="https://github.com/ad17171717" target="_blank" rel="noopener noreferrer"><img src="assets/images/github.webp" alt="GitHub"></a>
-                <a href="https://www.youtube.com/@AdrianDolinay" target="_blank" rel="noopener noreferrer"><img src="assets/images/youtube.webp" alt="YouTube"></a>
-                <a href="https://www.linkedin.com/in/adrian-dolinay-frm-96a289106/" target="_blank" rel="noopener noreferrer"><img src="assets/images/linkedin.webp" alt="LinkedIn"></a>
-                <a href="https://odysee.com/@adriandolinay:0" target="_blank" rel="noopener noreferrer"><img src="assets/images/odysee.webp" alt="Odysee"></a>
-            </div>
-        </nav>
-    </header>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="assets/images/logo_final.webp" alt="Adrian Dolinay Logo">
+        Adrian Dolinay
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="podcast.html">Podcast</a></li>
+        <li><a href="book-recommendations.html">Book Recommendations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="social-links">
+        <a href="https://github.com/ad17171717" target="_blank" rel="noopener noreferrer"><img src="assets/images/github.webp" alt="GitHub"></a>
+        <a href="https://www.youtube.com/@AdrianDolinay" target="_blank" rel="noopener noreferrer"><img src="assets/images/youtube.webp" alt="YouTube"></a>
+        <a href="https://www.linkedin.com/in/adrian-dolinay-frm-96a289106/" target="_blank" rel="noopener noreferrer"><img src="assets/images/linkedin.webp" alt="LinkedIn"></a>
+        <a href="https://odysee.com/@adriandolinay:0" target="_blank" rel="noopener noreferrer"><img src="assets/images/odysee.webp" alt="Odysee"></a>
+      </div>
+    </nav>
+  </header>
 
-    <main>
-        <section class="podcast-content">
-            <h1>The Aspiring STEM Geek</h1>
+  <main>
+    <section class="podcast-content">
+      <h1>The Aspiring STEM Geek</h1>
+      <p class="podcast-description">
+        The Aspiring STEM Geek is a podcast I created to have a casual conversation with people that work in or are interested in Science, Math, Engineering and Technology fields. The experience levels range from early career to decades of experience and the topics of discussion range from deep dives into data centers and chile peppers to what video games the guests are playing or what books they are reading. Hopefully there is an episode in the archive that interests you!
+      </p>
 
-            <p class="podcast-description">
-                The Aspiring STEM Geek is a podcast I created to have a casual conversation with people that work in or are interested in Science, Math, Engineering and Technology fields. The experience levels range from early career to decades of experience and the topics of discussion range from deep dives into data centers and chile peppers to what video games the guests are playing or what books they are reading. Hopefully there is an episode in the archive that interests you!
-            </p>
+      <div class="episode-dropdown">
+        <label for="episode-select" class="dynamic-label">Select Podcast Episode:</label>
+        <select id="episode-select" class="dynamic-select">
+          <option value="https://www.youtube.com/embed/Z3vUteuYDtQ" selected>NASA and Aviation with Nancy Currie-Gregg - #29</option>
+          <option value="https://www.youtube.com/embed/bf7-TaexAjg">Welding with Estevan Ortega - #28</option>
+          <option value="https://www.youtube.com/embed/x8gEoX0sGIk?si=ga8mNpKf7_IuA3n5">Data Centers with Jonathan Koomey - #27</option>
+          <option value="https://www.youtube.com/embed/Lh2vmN_QQV8?si=LbYs4RbveWBhTexQ">Nutritional Physiology with Emily Howard - #26</option>
+          <option value="https://www.youtube.com/embed/eYpN0QSfUFc?si=IbLuXgB5NT20h1gu">Volcanoes with Natália Gauer Pasqualon - #25</option>
+          <option value="https://www.youtube.com/embed/h6fC1sSm2Gg">Hydrology with Eric Larson - #24</option>
+          <option value="https://www.youtube.com/embed/ve2MTkIX5c8?si=iqUnMPKSuyklM9y9">Capybaras with Elizabeth Congdon - #23</option>
+          <option value="https://www.youtube.com/embed/IyAVODDGOF4?si=pHIMN_mTsmCxbbzF">Chile Peppers with the Chile Pepper Institute - #22</option>
+          <option value="https://www.youtube.com/embed/oMRsIuHmGkM?start=3714">Data Centers with Eric Masanet - #21</option>
+          <option value="https://www.youtube.com/embed/OK8NS_ROEI0">Statistics & Public Health with Leigh Cash - #20</option>
+          <option value="https://www.youtube.com/embed/Vv8XLuWpcAo">Causal Inference with Srikar Katta - #19</option>
+          <option value="https://www.youtube.com/embed/Bc4UCnPikeo">Physics and Finance with Damian Handzy - #18</option>
+          <option value="https://www.youtube.com/embed/d0njrFln-O4">Open Educational Resources with Anthony Palmiotto of OpenStax - #17</option>
+          <option value="https://www.youtube.com/embed/w93TMalMBvo">Tech News with Shawn Dutill - #16</option>
+          <option value="https://www.youtube.com/embed/-VZ5DqBYv3I">Mechanical Engineering and Snow Making with Yaroslav Stanchak - #15</option>
+          <option value="https://www.youtube.com/embed/9QIFDw-6-m0">Software Engineering, Coding Bootcamp & Nerd Pop Culture with Brittany Huber & Bradley Knutson - #14</option>
+          <option value="https://www.youtube.com/embed/xSrQqI2rZBM">The Military, Helicopters and Cybersecurity with Carl Denis - #13</option>
+          <option value="https://www.youtube.com/embed/IMEJ1FA5JaU">Software, AI and Sports with Jeffin Johnykutty - #12</option>
+          <option value="https://www.youtube.com/embed/lIjk2GOqmes">Finance, Economics and Management with Matt Taylor - #11</option>
+          <option value="https://www.youtube.com/embed/UWzBLT1cQBw">Computer Science, Robotics and Teaching with Jacob Snarr - #10</option>
+          <option value="https://www.youtube.com/embed/lgpMUCJagKU">Software Engineering, DevOps and Gaming with Shawn Dutill - #9</option>
+          <option value="https://www.youtube.com/embed/EHvzpATdYFM?start=3">Content Creation, YouTube Analytics and Economics with Nate Wooding - #8</option>
+          <option value="https://www.youtube.com/embed/Czp-ofGjnWI">Engineering, Finance and Teaching with Ronald Anderson - #7</option>
+          <option value="https://www.youtube.com/embed/irM7TzWXlz0">Music and Audio Technology with Evan McIntyre and Chris Krochak - #6</option>
+          <option value="https://www.youtube.com/embed/0vL5qU5qWJg">Cybersecurity with Ben Kofman - #5</option>
+          <option value="https://www.youtube.com/embed/VP1uZ51vHm4">Software, AI and ML with Taziamoma Abraham - #4</option>
+          <option value="https://www.youtube.com/embed/HDTf9yqTUzI">Tech News with Adrian Dolinay - #3</option>
+          <option value="https://www.youtube.com/embed/TIpb_2nspk0">Robotics with Damian Kozak - #2</option>
+          <option value="https://www.youtube.com/embed/Rbjf5pnkK4w">Talking Tech with Matthew Handzy - #1</option>
+        </select>
+      </div>
 
-            <div class="episode-dropdown">
-                <label for="episode-select" class="dynamic-label">Select Podcast Episode:</label>
-                <select id="episode-select" class="dynamic-select">
-                    <option value="https://www.youtube.com/embed/bf7-TaexAjg" selected>Welding with Estevan Ortega - #28</option>
-                    <option value="https://www.youtube.com/embed/x8gEoX0sGIk?si=ga8mNpKf7_IuA3n5">Data Centers with Jonathan Koomey - #27</option>
-                    <option value="https://www.youtube.com/embed/Lh2vmN_QQV8?si=LbYs4RbveWBhTexQ">Nutritional Physiology with Emily Howard - #26</option>
-                    <option value="https://www.youtube.com/embed/eYpN0QSfUFc?si=IbLuXgB5NT20h1gu">Volcanoes with Natália Gauer Pasqualon - #25</option>
-                    <option value="https://www.youtube.com/embed/h6fC1sSm2Gg">Hydrology with Eric Larson - #24</option>
-                    <option value="https://www.youtube.com/embed/ve2MTkIX5c8?si=iqUnMPKSuyklM9y9">Capybaras with Elizabeth Congdon - #23</option>
-                    <option value="https://www.youtube.com/embed/IyAVODDGOF4?si=pHIMN_mTsmCxbbzF">Chile Peppers with the Chile Pepper Institute - #22</option>
-                    <option value="https://www.youtube.com/embed/oMRsIuHmGkM?start=3714">Data Centers with Eric Masanet - #21</option>
-                    <option value="https://www.youtube.com/embed/OK8NS_ROEI0">Statistics & Public Health with Leigh Cash - #20</option>
-                    <option value="https://www.youtube.com/embed/Vv8XLuWpcAo">Causal Inference with Srikar Katta - #19</option>
-                    <option value="https://www.youtube.com/embed/Bc4UCnPikeo">Physics and Finance with Damian Handzy - #18</option>
-                    <option value="https://www.youtube.com/embed/d0njrFln-O4">Open Educational Resources with Anthony Palmiotto of OpenStax - #17</option>
-                    <option value="https://www.youtube.com/embed/w93TMalMBvo">Tech News with Shawn Dutill - #16</option>
-                    <option value="https://www.youtube.com/embed/-VZ5DqBYv3I">Mechanical Engineering and Snow Making with Yaroslav Stanchak - #15</option>
-                    <option value="https://www.youtube.com/embed/9QIFDw-6-m0">Software Engineering, Coding Bootcamp & Nerd Pop Culture with Brittany Huber & Bradley Knutson - #14</option>
-                    <option value="https://www.youtube.com/embed/xSrQqI2rZBM">The Military, Helicopters and Cybersecurity with Carl Denis - #13</option>
-                    <option value="https://www.youtube.com/embed/IMEJ1FA5JaU">Software, AI and Sports with Jeffin Johnykutty - #12</option>
-                    <option value="https://www.youtube.com/embed/lIjk2GOqmes">Finance, Economics and Management with Matt Taylor - #11</option>
-                    <option value="https://www.youtube.com/embed/UWzBLT1cQBw">Computer Science, Robotics and Teaching with Jacob Snarr - #10</option>
-                    <option value="https://www.youtube.com/embed/lgpMUCJagKU">Software Engineering, DevOps and Gaming with Shawn Dutill - #9</option>
-                    <option value="https://www.youtube.com/embed/EHvzpATdYFM?start=3">Content Creation, YouTube Analytics and Economics with Nate Wooding - #8</option>
-                    <option value="https://www.youtube.com/embed/Czp-ofGjnWI">Engineering, Finance and Teaching with Ronald Anderson - #7</option>
-                    <option value="https://www.youtube.com/embed/irM7TzWXlz0">Music and Audio Technology with Evan McIntyre and Chris Krochak - #6</option>
-                    <option value="https://www.youtube.com/embed/0vL5qU5qWJg">Cybersecurity with Ben Kofman - #5</option>
-                    <option value="https://www.youtube.com/embed/VP1uZ51vHm4">Software, AI and ML with Taziamoma Abraham - #4</option>
-                    <option value="https://www.youtube.com/embed/HDTf9yqTUzI">Tech News with Adrian Dolinay - #3</option>
-                    <option value="https://www.youtube.com/embed/TIpb_2nspk0">Robotics with Damian Kozak - #2</option>
-                    <option value="https://www.youtube.com/embed/Rbjf5pnkK4w">Talking Tech with Matthew Handzy - #1</option>
-                </select>
-            </div>
+      <div class="video-container">
+        <iframe id="podcast-video" src="https://www.youtube.com/embed/Z3vUteuYDtQ" frameborder="0" allowfullscreen></iframe>
+      </div>
 
-            <div class="video-container">
-                <iframe id="podcast-video" src="https://www.youtube.com/embed/bf7-TaexAjg" frameborder="0" allowfullscreen></iframe>
-            </div>
+      <section class="podcast-platforms" aria-labelledby="podcast-platforms-heading">
+        <h2 id="podcast-platforms-heading">Also Available On</h2>
+        <div class="platform-links">
+          <a href="https://podcasts.apple.com/podcast/id1765996824" target="_blank" rel="noopener noreferrer" aria-label="Listen on Apple Podcasts">
+            <img src="assets/images/applepodcasts.webp" alt="Apple Podcasts">
+          </a>
+          <a href="https://open.spotify.com/show/60dPNJbDPaPw7ru8g5btxV" target="_blank" rel="noopener noreferrer" aria-label="Listen on Spotify">
+            <img src="assets/images/spotify.webp" alt="Spotify">
+          </a>
+          <a href="https://iheart.com/podcast/269-202676097" target="_blank" rel="noopener noreferrer" aria-label="Listen on iHeart Radio">
+            <img src="assets/images/iheart.webp" alt="iHeart Radio">
+          </a>
+          <a href="https://audible.com/pd/B0DC73S9SN" target="_blank" rel="noopener noreferrer" aria-label="Listen on Audible">
+            <img src="assets/images/audible.webp" alt="Audible">
+          </a>
+          <a href="https://pca.st/podcast/a61338c0-4a13-013e-0d94-0243b8a24f53" target="_blank" rel="noopener noreferrer" aria-label="Listen on Pocket Casts">
+            <img src="assets/images/pocketcasts.webp" alt="Pocket Casts">
+          </a>
+        </div>
+      </section>
+    </section>
+  </main>
 
-            <section class="podcast-platforms" aria-labelledby="podcast-platforms-heading">
-                <h2 id="podcast-platforms-heading">Also Available On</h2>
+  <footer>
+    <p>© <span id="current-year">2026</span> Adrian Dolinay. All rights reserved.</p>
+  </footer>
 
-                <div class="platform-links">
-                    <a href="https://podcasts.apple.com/podcast/id1765996824" target="_blank" rel="noopener noreferrer" aria-label="Listen on Apple Podcasts">
-                        <img src="assets/images/applepodcasts.webp" alt="Apple Podcasts">
-                    </a>
-
-                    <a href="https://open.spotify.com/show/60dPNJbDPaPw7ru8g5btxV" target="_blank" rel="noopener noreferrer" aria-label="Listen on Spotify">
-                        <img src="assets/images/spotify.webp" alt="Spotify">
-                    </a>
-
-                    <a href="https://iheart.com/podcast/269-202676097" target="_blank" rel="noopener noreferrer" aria-label="Listen on iHeart Radio">
-                        <img src="assets/images/iheart.webp" alt="iHeart Radio">
-                    </a>
-
-                    <a href="https://audible.com/pd/B0DC73S9SN" target="_blank" rel="noopener noreferrer" aria-label="Listen on Audible">
-                        <img src="assets/images/audible.webp" alt="Audible">
-                    </a>
-                    
-                    <a href="https://pca.st/podcast/a61338c0-4a13-013e-0d94-0243b8a24f53" target="_blank" rel="noopener noreferrer" aria-label="Listen on Pocket Casts">
-                        <img src="assets/images/pocketcasts.webp" alt="Pocket Casts">
-                    </a>
-                </div>
-            </section>
-        </section>
-    </main>
-
-    <footer>
-        <p>© <span id="current-year">2026</span> Adrian Dolinay. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
