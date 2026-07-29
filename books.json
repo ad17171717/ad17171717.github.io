@@ -138,6 +138,15 @@
         "url": "#"
       }
     ],
+    "Philosophy": [
+      {
+        "title": "The Tao of Pooh",
+        "author": "Benjamin Hoff",
+        "image": "taoofpooh",
+        "height": 482,
+        "url": "https://en.wikipedia.org/wiki/The_Tao_of_Pooh"
+      }
+    ],
     "Science Fiction": [
       {
         "title": "Brave New World",
