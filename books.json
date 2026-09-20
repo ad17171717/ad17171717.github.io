@@ -232,6 +232,24 @@
     ],
     "Fiction": [
       {
+        "title": "Nancy Drew Series",
+        "author": "Carolyn Keene",
+        "image": "ncdrew",
+        "height": 482,
+        "url": "https://www.simonandschuster.com/series/Nancy-Drew",
+        "recommended_by": "Dr. Kelley Mullick",
+        "episode": 30
+      },
+      {
+        "title": "Ulysses",
+        "author": "James Joyce",
+        "image": "ulyses",
+        "height": 482,
+        "url": "https://www.penguinrandomhouse.com/books/797588/ulysses-by-james-joyce/",
+        "recommended_by": "Dr. Kelley Mullick",
+        "episode": 30
+      },
+      {
         "title": "Jonathan Livingston Seagull",
         "author": "Richard Bach",
         "image": "jls",
