@@ -204,6 +204,14 @@
   "guests": {
     "Adventure & Exploration": [
       {
+        "title": "Through Ice and Fire",
+        "author": "Sarah Laverick",
+        "image": "throughfireice",
+        "height": 482,
+        "recommended_by": "Rob Hindley",
+        "episode": 31
+      },
+      {
         "title": "The Emerald Mile: The Epic Story of the Fastest Ride in History Through the Heart of the Grand Canyon",
         "author": "Kevin Fedarko",
         "image": "emeraldmile",
